@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typ Top</title>
+    <link rel="stylesheet" href="style/style.css">
+    <!-- Font: Roboto Mono
+        font-family: "Roboto Mono", monospace;
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container header-flex">
+            <h1>Typ Top</h1>
+            <div class="login-register-flex">
+                <form id="emailForm" onsubmit="fetchGravatarProfile(event)">
+                    <label for="email">Log in with Gravatar</label>
+                    <input type="email" id="email" name="email" placeholder="Email">
+                    <button type="submit" id="login-btn">Log in</button>
+                </form>
+                <a class="register-btn" target="_blank"
+                    href="https://wordpress.com/log-in/link?client_id=1854&redirect_to=https%3A%2F%2Fpublic-api.wordpress.com%2Foauth2%2Fauthorize%3Fclient_id%3D1854%26response_type%3Dcode%26blog_id%3D0%26state%3D61d3f3a2ded54f97183eef5c51862acd463cef30c1d6978b0abc5256c0d07ff6%26redirect_uri%3Dhttps%253A%252F%252Fgravatar.com%252Fconnect%252F%253Faction%253Drequest_access_token%26from-calypso%3D1">Register</a>
+            </div>
+        </div>
+    </header>
+    <main class="blur overlay">
+        <div class="container">
+            <section>
+                <div id="profileInfo">
+                    <h2>Profile Info</h2>
+                </div>
+            </section>
+            <section>
+                <div class="keyboard">
+                    <div class="keyboardRow">
+                        <div class="keyA key">A</div>
+                        <div class="keyZ key">Z</div>
+                        <div class="keyE key">E</div>
+                        <div class="keyR key">R</div>
+                        <div class="keyT key">T</div>
+                        <div class="keyY key">Y</div>
+                        <div class="keyU key">U</div>
+                        <div class="keyI key">I</div>
+                        <div class="keyO key">O</div>
+                        <div class="keyP key">P</div>
+                    </div>
+                    <div class="keyboardRow">
+                        <div class="keyQ key">Q</div>
+                        <div class="keyS key">S</div>
+                        <div class="keyD key">D</div>
+                        <div class="keyF key">F</div>
+                        <div class="keyG key">G</div>
+                        <div class="keyH key">H</div>
+                        <div class="keyJ key">J</div>
+                        <div class="keyK key">K</div>
+                        <div class="keyL key">L</div>
+                        <div class="keyM key">M</div>
+                    </div>
+                    <div class="keyboardRow">
+                        <div class="keyW key">W</div>
+                        <div class="keyX key">X</div>
+                        <div class="keyC key">C</div>
+                        <div class="keyV key">V</div>
+                        <div class="keyB key">B</div>
+                        <div class="keyN key">N</div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div id="test-text"></div>
+                <textarea id="test-input" rows="5" placeholder="Type to start"></textarea>
+
+                <div id="funcionalitys">
+                    <a id="stop-btn">Stop Test</a>
+                    <a id="reset-btn">Take it again</a>
+                    <div class="enable-backspace">
+                        <label for="enable-backspace">Enable Backspace</label>
+                        <input type="checkbox" id="enable-backspace">
+                    </div>
+                    <div class="timer-mistakes">
+                        <p>Time left: <span id="timer">30s</span></p>
+                        <p>Mistakes: <span id="mistakes">0</span></p>
+                    </div>
+                </div>
+            </section>
+            <section class="result">
+                <div>
+                    <h2>Your result</h2>
+                    <div id="results"></div>
+                </div>
+                <div>
+                    <h2>Performance</h2>
+                    <ol id="performance">
+
+                    </ol>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!--script-js cdn-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+    <script src="src/app.js"></script>
+    <!--Dit is een extra file om de app.js zo klein mogelijk te houden-->
+    <script src="src/extraFeature.js"></script>
+    <footer>
+        <p>&copy; 2024 Hayk.</p>
+    </footer>
+</body>
+
+</html>
