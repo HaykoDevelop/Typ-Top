@@ -1,3 +1,3 @@
-# Typ Top
+# Typ Top  
 
-typ top is a simpel typing test app created with html, css and javascript. It uses chuck nurres quotes api to genereate random texts for the test. The app also saves the game data to the browsers local memory.
+**Typ Top** is a simple typing test app built with **HTML, CSS, and JavaScript**. It uses the **Chuck Norris Quotes API** to generate random texts for the test. The app also saves game data to the browser's local storage, allowing users to track their progress.
